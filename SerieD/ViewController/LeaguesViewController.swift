@@ -8,8 +8,10 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var leagues: NSArray = []
+var leagues: [String] = []
+var indexCell = -1
+
+class LeaguesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -17,19 +19,25 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         leagues = ["Girone A", "Girone B", "Girone C", "Girone D", "Girone E", "Girone F", "Girone G", "Girone H"]
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return leagues.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
         }
         
-        cell?.textLabel?.text = leagues[indexPath.row] as! String
+        cell?.textLabel?.text = leagues[indexPath.row]
         
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexCell = indexPath.row
+        
+        performSegue(withIdentifier: "segueLeague", sender: self)
     }
 }
 

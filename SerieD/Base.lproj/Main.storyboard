@@ -53,7 +53,7 @@
         <!--Gironi-->
         <scene sceneID="J3e-3Z-HG5">
             <objects>
-                <tableViewController id="7fR-mV-Aiu" customClass="LeaguesViewController" sceneMemberID="viewController">
+                <tableViewController id="7fR-mV-Aiu" customClass="LeaguesViewController" customModule="SerieD" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J7s-uo-9Ek">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ZDI-An-pZk" kind="show" id="uhp-Wz-JWo"/>
+                                    <segue destination="ZDI-An-pZk" kind="show" identifier="segueLeague" id="uhp-Wz-JWo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,20 +82,32 @@
             </objects>
             <point key="canvasLocation" x="1706" y="349"/>
         </scene>
-        <!--View Controller-->
+        <!--League Detail View Controller-->
         <scene sceneID="QfL-O8-a9T">
             <objects>
-                <viewController id="ZDI-An-pZk" sceneMemberID="viewController">
+                <viewController id="ZDI-An-pZk" customClass="LeagueDetailViewController" customModule="SerieD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Un-Eg-hkc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icl-oh-rln">
+                                <rect key="frame" x="0.0" y="64" width="375" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KvT-w0-gZQ"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLeague" destination="Icl-oh-rln" id="Gmg-cN-iFB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhI-q5-u0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2444" y="349"/>
+            <point key="canvasLocation" x="2444" y="348.57571214392806"/>
         </scene>
         <!--Gironi-->
         <scene sceneID="FYE-T3-ALi">
