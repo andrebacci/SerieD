@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import WebKit
 
 class LeagueDetailViewController: UIViewController {
     
     @IBOutlet weak var titleLeague: UILabel!
+    @IBOutlet weak var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleLeague.text = leagues[indexCell]
+        
+        // init webView
+        let url = URL(string: "http://www.google.com")
+        let request = URLRequest(url: url!)
+        
+        // loadHTMLString
+        webView.load(request)
     }
 }
