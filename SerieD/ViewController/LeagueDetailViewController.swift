@@ -20,10 +20,12 @@ class LeagueDetailViewController: UIViewController {
         titleLeague.text = leagues[indexCell]
         
         // init webView
-        let url = URL(string: "http://www.google.com")
-        let request = URLRequest(url: url!)
+        //let url = URL(string: "http://www.google.com")
+        //let request = URLRequest(url: url!)
         
-        // loadHTMLString
-        webView.load(request)
+        let frame = "<html><body>Hello world!</body></html>"
+        
+        webView.loadHTMLString(frame, baseURL: nil)
+        //webView.load(request)
     }
 }
