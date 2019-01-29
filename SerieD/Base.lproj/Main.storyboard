@@ -104,16 +104,28 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDz-aI-oVO">
+                                <rect key="frame" x="0.0" y="300" width="375" height="318"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Icl-oh-rln" firstAttribute="leading" secondItem="KvT-w0-gZQ" secondAttribute="leading" id="9cy-19-9vc"/>
+                            <constraint firstItem="MDz-aI-oVO" firstAttribute="top" secondItem="m7z-No-Vxw" secondAttribute="bottom" constant="8" id="CID-Q6-KJM"/>
                             <constraint firstItem="m7z-No-Vxw" firstAttribute="top" secondItem="Icl-oh-rln" secondAttribute="bottom" constant="8" id="H9u-He-L43"/>
                             <constraint firstItem="m7z-No-Vxw" firstAttribute="leading" secondItem="KvT-w0-gZQ" secondAttribute="leading" id="Ogb-73-BoM"/>
                             <constraint firstItem="m7z-No-Vxw" firstAttribute="top" secondItem="Icl-oh-rln" secondAttribute="bottom" constant="8" id="TzI-d7-6eJ"/>
                             <constraint firstItem="m7z-No-Vxw" firstAttribute="bottom" secondItem="KvT-w0-gZQ" secondAttribute="bottom" id="VwO-ZR-Gsu"/>
                             <constraint firstItem="m7z-No-Vxw" firstAttribute="trailing" secondItem="KvT-w0-gZQ" secondAttribute="trailing" id="dMn-1e-uBh"/>
+                            <constraint firstItem="MDz-aI-oVO" firstAttribute="bottom" secondItem="KvT-w0-gZQ" secondAttribute="bottom" id="eEO-Ap-h7R"/>
+                            <constraint firstItem="MDz-aI-oVO" firstAttribute="leading" secondItem="KvT-w0-gZQ" secondAttribute="leading" id="eF8-6b-kMd"/>
                             <constraint firstItem="Icl-oh-rln" firstAttribute="top" secondItem="KvT-w0-gZQ" secondAttribute="top" id="f4s-Zo-pcL"/>
+                            <constraint firstItem="MDz-aI-oVO" firstAttribute="trailing" secondItem="KvT-w0-gZQ" secondAttribute="trailing" id="lBR-g5-Xhr"/>
                             <constraint firstItem="Icl-oh-rln" firstAttribute="trailing" secondItem="KvT-w0-gZQ" secondAttribute="trailing" id="r4p-R4-V2x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KvT-w0-gZQ"/>
