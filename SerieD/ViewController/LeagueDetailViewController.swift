@@ -12,7 +12,8 @@ import WebKit
 class LeagueDetailViewController: UIViewController {
     
     @IBOutlet weak var titleLeague: UILabel!
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var scoreWebView: WKWebView!
+    @IBOutlet weak var leagueWebView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +61,7 @@ class LeagueDetailViewController: UIViewController {
         
         let urlScore = "<html><body>" + frameScore + "</body><html>"
         
-        webView.loadHTMLString(urlScore, baseURL: nil)
+        scoreWebView.loadHTMLString(urlScore, baseURL: nil)
         //webView.load(request)
     }
 }
