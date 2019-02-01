@@ -12,8 +12,8 @@ import WebKit
 class LeagueDetailViewController: UIViewController {
     
     @IBOutlet weak var titleLeague: UILabel!
+    @IBOutlet weak var leagueWebView: WKWebView!    
     @IBOutlet weak var scoreWebView: WKWebView!
-    @IBOutlet weak var leagueWebView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,7 @@ class LeagueDetailViewController: UIViewController {
         switch (indexCell) {
         case 0:
             frameScore = "<iframe src='https://www.tuttocampo.it/Widget/Risultati/348a4ae9-f7cb-4e51-91ad-41a488e36bac' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
+            frameLeague = "<iframe src='https://www.tuttocampo.it/Widget/Classifica/348a4ae9-f7cb-4e51-91ad-41a488e36bac' width='100%' height='100%' scrolling='no' frameborder=0></iframe>"
             break;
         case 1:
             frameScore = "<iframe src='https://www.tuttocampo.it/Widget/Risultati/47e84921-2cf6-4738-95fc-989ae78a662a' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
@@ -60,8 +61,10 @@ class LeagueDetailViewController: UIViewController {
         }
         
         let urlScore = "<html><body>" + frameScore + "</body><html>"
+        let urlLeague = "<html><body>" + frameLeague + "</body></html>"
         
         scoreWebView.loadHTMLString(urlScore, baseURL: nil)
+        leagueWebView.loadHTMLString(urlLeague, baseURL: nil)
         //webView.load(request)
     }
 }
