@@ -16,6 +16,8 @@
 		1563C0DD21FA309A00008E00 /* SerieDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1563C0DC21FA309A00008E00 /* SerieDTests.swift */; };
 		1563C0E821FA309A00008E00 /* SerieDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1563C0E721FA309A00008E00 /* SerieDUITests.swift */; };
 		15A4805021FBD27E00BD7BE4 /* LeagueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A4804F21FBD27E00BD7BE4 /* LeagueDetailViewController.swift */; };
+		15CEDB522204D55600DECA98 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEDB512204D55600DECA98 /* TeamsViewController.swift */; };
+		15CEDB552204D5C600DECA98 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEDB542204D5C600DECA98 /* TeamModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		1563C0E721FA309A00008E00 /* SerieDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDUITests.swift; sourceTree = "<group>"; };
 		1563C0E921FA309A00008E00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A4804F21FBD27E00BD7BE4 /* LeagueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailViewController.swift; sourceTree = "<group>"; };
+		15CEDB512204D55600DECA98 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		15CEDB542204D5C600DECA98 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		1563C0C421FA306600008E00 /* SerieD */ = {
 			isa = PBXGroup;
 			children = (
+				15CEDB532204D5BA00DECA98 /* Model */,
 				15A4805121FBD2A000BD7BE4 /* ViewController */,
 				1563C0C521FA306700008E00 /* AppDelegate.swift */,
 				1563C0CB21FA306700008E00 /* Main.storyboard */,
@@ -135,8 +140,17 @@
 				1563C0C721FA306700008E00 /* HomeViewController.swift */,
 				15A4804F21FBD27E00BD7BE4 /* LeagueDetailViewController.swift */,
 				1563C0C921FA306700008E00 /* LeaguesViewController.swift */,
+				15CEDB512204D55600DECA98 /* TeamsViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		15CEDB532204D5BA00DECA98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15CEDB542204D5C600DECA98 /* TeamModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +286,9 @@
 			files = (
 				15A4805021FBD27E00BD7BE4 /* LeagueDetailViewController.swift in Sources */,
 				1563C0CA21FA306700008E00 /* LeaguesViewController.swift in Sources */,
+				15CEDB552204D5C600DECA98 /* TeamModel.swift in Sources */,
 				1563C0C621FA306700008E00 /* AppDelegate.swift in Sources */,
+				15CEDB522204D55600DECA98 /* TeamsViewController.swift in Sources */,
 				1563C0C821FA306700008E00 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
