@@ -12,10 +12,43 @@ import UIKit
 var teams: [TeamModel] = []
 var indexTeam = -1
 
+let jsonTeams = "http://www.usdsestrilevante.it/vecchioSito/Andre/teams.json"
+
 class TeamsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        populateTableTeams()
+    }
+    
+    func populateTableTeams () {
+        guard let url = URL(string: jsonTeams) else { return }
+        URLSession.shared.dataTask(with: url) { (data,response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            if let data = data {
+                do {
+                    let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(jsonParse)
+                    
+                    guard let teams = jsonParse as? [[String: Any]] else {
+                        return
+                    }
+                    
+                    print(teams)
+                    
+                    for t in teams {
+                        let team: TeamModel = TeamModel(t)
+                        let andre = 0
+                        print(t)
+                    }
+                } catch {
+                    print(error)
+                }
+            }            
+        }.resume()        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +61,7 @@ class TeamsViewController: UITableViewController {
             cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
         }
         
-        //cell?.textLabel?.text = teams[indexPath.row]
+        cell?.textLabel?.text = teams[indexPath.row].name
         
         return cell!
     }
