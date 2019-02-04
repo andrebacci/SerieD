@@ -72,6 +72,6 @@ class TeamsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indexTeam = indexPath.row
         
-        performSegue(withIdentifier: "segueLeague", sender: self)
+        performSegue(withIdentifier: "segueTeam", sender: self)
     }
 }
