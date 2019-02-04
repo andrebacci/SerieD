@@ -33,16 +33,19 @@ class TeamsViewController: UITableViewController {
                     let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
                     print(jsonParse)
                     
-                    guard let teams = jsonParse as? [[String: Any]] else {
+                    guard let jsonTeans = jsonParse as? [[String: Any]] else {
                         return
                     }
                     
                     print(teams)
                     
-                    for t in teams {
-                        let team: TeamModel = TeamModel(t)
-                        let andre = 0
-                        print(t)
+                    for jt in jsonTeans {
+                        let team: TeamModel = TeamModel(jt)
+                        teams.append(team)
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
                     }
                 } catch {
                     print(error)
