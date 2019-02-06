@@ -14,6 +14,7 @@ struct TeamModel: Codable {
     var foundation: String = ""
     var image: String = ""
     var color: String = ""
+    var stadium: String = ""
     
     init?(json: [String: Any]) {
         name = (json["name"] as? String)!

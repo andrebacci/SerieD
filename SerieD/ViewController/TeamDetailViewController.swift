@@ -9,6 +9,27 @@
 import Foundation
 import UIKit
 
-class TeamDetailViewController {
+class TeamDetailViewController: UIViewController {
     
+    @IBOutlet weak var nameTxt: UILabel!
+    @IBOutlet weak var cityTxt: UILabel!
+    @IBOutlet weak var foundationTxt: UILabel!
+    @IBOutlet weak var stadiumTxt: UILabel!
+    @IBOutlet weak var colorTxt: UILabel!
+    @IBOutlet weak var presidentTxt: UILabel!
+    @IBOutlet weak var misterTxt: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let team = teams[indexTeam]
+        
+        // Add image
+        
+        nameTxt.text = team.name
+        cityTxt.text = team.city
+        foundationTxt.text = team.foundation
+        stadiumTxt.text = team.stadium
+        colorTxt.text = team.color
+    }
 }
