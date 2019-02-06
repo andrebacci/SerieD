@@ -15,6 +15,10 @@ struct TeamModel: Codable {
     var image: String = ""
     var color: String = ""
     var stadium: String = ""
+    var president: String = ""
+    var mister: String = ""
+    var website: String = ""
+    var nameComplete: String = ""
     
     init?(json: [String: Any]) {
         name = (json["name"] as? String)!
@@ -22,6 +26,10 @@ struct TeamModel: Codable {
         foundation = (json["fondation"] as? String)!
         image = (json["image"] as? String)!
         color = (json["color"] as? String)!
+        president = (json["president"] as? String)!
+        mister = (json["mister"] as? String)!
+        website = (json["website"] as? String)!
+        nameComplete = (json["nameComplete"] as? String)!
     }
     
     init(_ dictionary: [String: Any]) {
@@ -30,5 +38,9 @@ struct TeamModel: Codable {
         foundation = (dictionary["fondation"] as? String)!
         image = (dictionary["image"] as? String)!
         color = (dictionary["color"] as? String)!
+        president = (dictionary["president"] as? String)!
+        mister = (dictionary["mister"] as? String)!
+        website = (dictionary["website"] as? String)!
+        nameComplete = (dictionary["nameComplete"] as? String)!
     }
 }

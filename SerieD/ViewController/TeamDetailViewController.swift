@@ -17,19 +17,27 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet weak var stadiumTxt: UILabel!
     @IBOutlet weak var colorTxt: UILabel!
     @IBOutlet weak var presidentTxt: UILabel!
-    @IBOutlet weak var misterTxt: UILabel!
+    @IBOutlet weak var misterTxt: UILabel!        
+    
+    var team: TeamModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let team = teams[indexTeam]
+        if orderByName {
+            team = teamsSortedByName[indexTeam]
+        } else {
+            
+        }
         
-        // Add image
-        
-        nameTxt.text = team.name
-        cityTxt.text = team.city
-        foundationTxt.text = team.foundation
-        stadiumTxt.text = team.stadium
-        colorTxt.text = team.color
+        nameTxt.text = team!.name
+        cityTxt.text = team!.city
+        foundationTxt.text = team!.foundation
+        stadiumTxt.text = team!.stadium
+        colorTxt.text = team!.color
+        presidentTxt.text = team!.president
+        misterTxt.text = team!.mister
+        //nameCompleteTxt.text = team!.nameComplete
+        //websiteTxt.text = team!.website
     }
 }
