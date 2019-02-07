@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-var teams: [TeamModel] = []
 var teamsSortedByName: [TeamModel] = []
 
 var indexTeam = -1
@@ -42,6 +41,8 @@ class TeamsViewController: UITableViewController {
                     guard let jsonTeams = jsonParse as? [[String: Any]] else {
                         return
                     }
+                    
+                    var teams: [TeamModel] = []
                     
                     for jt in jsonTeams {
                         let team: TeamModel = TeamModel(jt)
