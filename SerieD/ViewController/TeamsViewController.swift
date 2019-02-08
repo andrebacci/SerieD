@@ -17,7 +17,9 @@ var orderByName = true
 
 let jsonTeams = "http://www.usdsestrilevante.it/vecchioSito/Andre/teams.json"
 
-let teamsInLeague: [Int] = [2, 0, 0, 0, 0, 0, 0, 0, 0]
+//let teamsInLeague: [Int] = [2, 0, 0, 0, 0, 0, 0, 0, 0]
+
+let teamsInLeague: [Int] = [(config?.countA)!, (config?.countB)!, (config?.countC)!, (config?.countD)!, (config?.countE)!, (config?.countF)!, (config?.countG)!, (config?.countH)!, (config?.countI)!]
 
 class TeamsViewController: UITableViewController {
     override func viewDidLoad() {
@@ -83,7 +85,7 @@ class TeamsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if orderByName {
-            return "Elenco Squadre 2018/2019"
+            return "Elenco Squadre " + (config?.season)!
         } else {
             switch section {
             case 0:
