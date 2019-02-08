@@ -16,21 +16,53 @@ var indexTeam = -1
 var orderByName = true
 
 let jsonTeams = "http://www.usdsestrilevante.it/vecchioSito/Andre/teams.json"
+let jsonConfig = "http://www.usdsestrilevante.it/vecchioSito/Andre/config.json"
 
 //let teamsInLeague: [Int] = [2, 0, 0, 0, 0, 0, 0, 0, 0]
 
 let teamsInLeague: [Int] = [(config?.countA)!, (config?.countB)!, (config?.countC)!, (config?.countD)!, (config?.countE)!, (config?.countF)!, (config?.countG)!, (config?.countH)!, (config?.countI)!]
 
 class TeamsViewController: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        populateTableTeams()
+        //getConfig()
+        
+        loadJsonFiles()
     }
     
-    func populateTableTeams () {
-        guard let url = URL(string: jsonTeams) else { return }
+    func getConfig() {
+        guard let url = URL(string: jsonConfig) else { return }
         URLSession.shared.dataTask(with: url) { (data,response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            if let data = data {
+                do {
+                    let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(jsonParse)
+                    
+                    guard let jsonConfig = jsonParse as? [String: Any] else {
+                        return
+                    }
+                    
+                    config = ConfigModel(json: jsonConfig)!
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+        }.resume()
+    }
+    
+    func loadJsonFiles () {
+        guard let urlTeam = URL(string: jsonTeams) else { return }
+        URLSession.shared.dataTask(with: urlTeam) { (data,response, error) in
             if error != nil {
                 print(error!.localizedDescription)
             }
@@ -64,7 +96,7 @@ class TeamsViewController: UITableViewController {
                     print(error)
                 }
             }            
-        }.resume()        
+        }.resume()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,31 +116,35 @@ class TeamsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if orderByName {
-            return "Elenco Squadre " + (config?.season)!
-        } else {
-            switch section {
-            case 0:
-                return "Girone A"
-            case 1:
-                return "Girone B"
-            case 2:
-                return "Girone C"
-            case 3:
-                return "Girone D"
-            case 4:
-                return "Girone E"
-            case 5:
-                return "Girone F"
-            case 6:
-                return "Girone G"
-            case 7:
-                return "Girone H"
-            case 8:
-                return "Girone I"
-            default:
-                return "Error"
+        if config != nil {
+            if orderByName {
+                return "Elenco Squadre " + (config?.season)!
+            } else {
+                switch section {
+                case 0:
+                    return "Girone A"
+                case 1:
+                    return "Girone B"
+                case 2:
+                    return "Girone C"
+                case 3:
+                    return "Girone D"
+                case 4:
+                    return "Girone E"
+                case 5:
+                    return "Girone F"
+                case 6:
+                    return "Girone G"
+                case 7:
+                    return "Girone H"
+                case 8:
+                    return "Girone I"
+                default:
+                    return "Error"
+                }
             }
+        } else {
+            return "Elenco Squadre"
         }
     }
     

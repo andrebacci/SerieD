@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Sestri Levante",
+    "nameComplete": "U.S. Sestri Levante",
+    "city": "Sestri Levante",
+    "fondation": "1919",
+    "image": "www.google.it",
+    "color": "Rosso-Blu",
+    "stadium": "Stadio Giuseppe Sivori",
+    "president": "Stefano Risaliti",
+    "mister": "Costanzo Celestini",
+    "website": "www.usdsestrilevante.it",
+    "league": "Girone A"
+  },
+  {
+    "name": "Lavagnese",
+
+    "city": "Lavagna",
+    "nameComplete": "U.S. Lavagnese",
+    "fondation": "1919",
+    "image": "www.google.it",
+    "color": "Bianco-Nero",
+    "stadium": "Stadio Edoardo Riboli",
+    "president": "Stefano Compagnoni",
+    "mister": "Luca Tabbiani",
+    "website": "www.lavagnese.com",
+    "league": "Girone A"
+  }
+]

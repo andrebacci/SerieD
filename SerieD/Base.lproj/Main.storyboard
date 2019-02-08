@@ -171,6 +171,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-RX-23c">
+                                <rect key="frame" x="16" y="470" width="343" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Visit webSite"/>
+                                <connections>
+                                    <segue destination="WmB-Fb-3uN" kind="show" id="HfC-yV-3c9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iOa-OX-cwb"/>
@@ -188,6 +196,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fll-ez-DvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2444" y="1034.9325337331336"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cKh-lC-gxJ">
+            <objects>
+                <viewController id="WmB-Fb-3uN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1U5-ib-dAo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ips-wY-AZc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8s-Qj-1vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3279" y="1035"/>
         </scene>
         <!--Squadre-->
         <scene sceneID="0OL-9T-hMX">
