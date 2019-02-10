@@ -11,10 +11,17 @@ import UIKit
 var config: ConfigModel? = nil
 
 class HomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+                
+    }
+    
+    @IBAction func showMenu(_ sender: Any) {
+        leadingConstraint.constant = 0
     }
 }
 
