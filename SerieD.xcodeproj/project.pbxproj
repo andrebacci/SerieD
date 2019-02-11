@@ -22,6 +22,7 @@
 		15CEDB522204D55600DECA98 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEDB512204D55600DECA98 /* TeamsViewController.swift */; };
 		15CEDB552204D5C600DECA98 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEDB542204D5C600DECA98 /* TeamModel.swift */; };
 		15D26BD5220D5B0A00E4BA05 /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D26BD4220D5B0A00E4BA05 /* ConfigModel.swift */; };
+		15F0EBD322122701003ACC0E /* ComunicatiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0EBD222122700003ACC0E /* ComunicatiViewController.swift */; };
 		15F839552208EE3D00E325ED /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F839542208EE3D00E325ED /* TeamDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		15CEDB512204D55600DECA98 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		15CEDB542204D5C600DECA98 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 		15D26BD4220D5B0A00E4BA05 /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
+		15F0EBD222122700003ACC0E /* ComunicatiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComunicatiViewController.swift; sourceTree = "<group>"; };
 		15F839542208EE3D00E325ED /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 		15A4805121FBD2A000BD7BE4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				15F0EBD222122700003ACC0E /* ComunicatiViewController.swift */,
 				1563C0C721FA306700008E00 /* HomeViewController.swift */,
 				15A4804F21FBD27E00BD7BE4 /* LeagueDetailViewController.swift */,
 				1563C0C921FA306700008E00 /* LeaguesViewController.swift */,
@@ -313,6 +316,7 @@
 				1563C0CA21FA306700008E00 /* LeaguesViewController.swift in Sources */,
 				15CEDB552204D5C600DECA98 /* TeamModel.swift in Sources */,
 				15D26BD5220D5B0A00E4BA05 /* ConfigModel.swift in Sources */,
+				15F0EBD322122701003ACC0E /* ComunicatiViewController.swift in Sources */,
 				1563C0C621FA306700008E00 /* AppDelegate.swift in Sources */,
 				15F839552208EE3D00E325ED /* TeamDetailViewController.swift in Sources */,
 				15CEDB522204D55600DECA98 /* TeamsViewController.swift in Sources */,
