@@ -4,7 +4,7 @@
     "nameComplete": "U.S. Sestri Levante",
     "city": "Sestri Levante",
     "fondation": "1919",
-    "image": "www.google.it",
+    "image": "www.usdsestrilevante.it/image/loghi/sestri_levante.png",
     "color": "Rosso-Blu",
     "stadium": "Stadio Giuseppe Sivori",
     "president": "Stefano Risaliti",
@@ -14,11 +14,10 @@
   },
   {
     "name": "Lavagnese",
-
     "city": "Lavagna",
     "nameComplete": "U.S. Lavagnese",
     "fondation": "1919",
-    "image": "www.google.it",
+    "image": "www.usdsestrilevante.it/image/loghi/lavagnese.png",
     "color": "Bianco-Nero",
     "stadium": "Stadio Edoardo Riboli",
     "president": "Stefano Compagnoni",
