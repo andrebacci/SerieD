@@ -22,6 +22,7 @@
 		15CEDB522204D55600DECA98 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEDB512204D55600DECA98 /* TeamsViewController.swift */; };
 		15CEDB552204D5C600DECA98 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEDB542204D5C600DECA98 /* TeamModel.swift */; };
 		15D26BD5220D5B0A00E4BA05 /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D26BD4220D5B0A00E4BA05 /* ConfigModel.swift */; };
+		15E3802322134276005D9ADD /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3802222134276005D9ADD /* AboutUsViewController.swift */; };
 		15F0EBD322122701003ACC0E /* ComunicatiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0EBD222122700003ACC0E /* ComunicatiViewController.swift */; };
 		15F839552208EE3D00E325ED /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F839542208EE3D00E325ED /* TeamDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		15CEDB512204D55600DECA98 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		15CEDB542204D5C600DECA98 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 		15D26BD4220D5B0A00E4BA05 /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
+		15E3802222134276005D9ADD /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		15F0EBD222122700003ACC0E /* ComunicatiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComunicatiViewController.swift; sourceTree = "<group>"; };
 		15F839542208EE3D00E325ED /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 				15CEDB512204D55600DECA98 /* TeamsViewController.swift */,
 				15F839542208EE3D00E325ED /* TeamDetailViewController.swift */,
 				15305168220E33C3004154DD /* WebSiteViewController.swift */,
+				15E3802222134276005D9ADD /* AboutUsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				15F839552208EE3D00E325ED /* TeamDetailViewController.swift in Sources */,
 				15CEDB522204D55600DECA98 /* TeamsViewController.swift in Sources */,
 				1563C0C821FA306700008E00 /* HomeViewController.swift in Sources */,
+				15E3802322134276005D9ADD /* AboutUsViewController.swift in Sources */,
 				15305169220E33C3004154DD /* WebSiteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

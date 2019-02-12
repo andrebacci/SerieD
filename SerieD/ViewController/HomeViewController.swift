@@ -14,14 +14,42 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
+    var menuIsHidden = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-                
+        
+        leadingConstraint.constant = -190
     }
     
-    @IBAction func showMenu(_ sender: Any) {
-        leadingConstraint.constant = 0
+    
+    @IBAction func toggleMenu(_ sender: UIBarButtonItem) {
+        if menuIsHidden {
+            leadingConstraint.constant = 0
+            
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            leadingConstraint.constant = -190
+            
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        }
+        
+        menuIsHidden = !menuIsHidden
+    }
+    
+    @IBAction func showItemMenu(_ sender: Any) {
+        leadingConstraint.constant = -190
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+        
+        menuIsHidden = true
     }
 }
 
