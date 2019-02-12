@@ -16,13 +16,60 @@ class HomeViewController: UIViewController {
     
     var menuIsHidden = true
     
+    let jsonTeams = "http://www.usdsestrilevante.it/vecchioSito/Andre/teams.json"
+    let jsonConfig = "http://www.usdsestrilevante.it/vecchioSito/Andre/config.json"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        loadJson()
         
         leadingConstraint.constant = -190
     }
     
+    func loadJson() {
+        let urlConfig = URL(string: jsonConfig)
+        let urlTeams = URL(string: jsonTeams)
+        
+        // Parse Config Json
+        let task = URLSession.shared.dataTask(with: urlConfig!) {(data, response, error) in
+            if let data = data {
+                do {
+                    let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(jsonParse)
+                    
+                    guard let jsonConfig = jsonParse as? [String: Any] else {
+                        return
+                    }
+                    
+                    config = ConfigModel(json: jsonConfig)!
+                } catch {
+                    print(error)
+                }
+            }
+            
+            // Parse Teams Json
+            let task = URLSession.shared.dataTask(with: urlTeams!) {(data, response, error) in
+                if let data = data {
+                    do {
+                        let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
+                        print(jsonParse)
+                        
+                        guard let jsonTeams = jsonParse as? [[String: Any]] else {
+                            return
+                        }                    
+                        
+                        for jt in jsonTeams {
+                            let team: TeamModel = TeamModel(jt)
+                            teams.append(team)
+                        }
+                    } catch {
+                        print(error)
+                    }
+                }
+            }.resume()
+        }.resume()
+    }
     
     @IBAction func toggleMenu(_ sender: UIBarButtonItem) {
         if menuIsHidden {

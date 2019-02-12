@@ -9,16 +9,12 @@
 import Foundation
 import UIKit
 
+var teams: [TeamModel] = []
 var teamsSortedByName: [TeamModel] = []
 
 var indexTeam = -1
 
 var orderByName = true
-
-let jsonTeams = "http://www.usdsestrilevante.it/vecchioSito/Andre/teams.json"
-let jsonConfig = "http://www.usdsestrilevante.it/vecchioSito/Andre/config.json"
-
-//let teamsInLeague: [Int] = [2, 0, 0, 0, 0, 0, 0, 0, 0]
 
 let teamsInLeague: [Int] = [(config?.countA)!, (config?.countB)!, (config?.countC)!, (config?.countD)!, (config?.countE)!, (config?.countF)!, (config?.countG)!, (config?.countH)!, (config?.countI)!]
 
@@ -27,77 +23,8 @@ class TeamsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //getConfig()
-        
-        loadJsonFiles()
-    }
-    
-    func getConfig() {
-        guard let url = URL(string: jsonConfig) else { return }
-        URLSession.shared.dataTask(with: url) { (data,response, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            }
-            
-            if let data = data {
-                do {
-                    let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(jsonParse)
-                    
-                    guard let jsonConfig = jsonParse as? [String: Any] else {
-                        return
-                    }
-                    
-                    config = ConfigModel(json: jsonConfig)!
-                    
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-                } catch {
-                    print(error)
-                }
-            }
-        }.resume()
-    }
-    
-    func loadJsonFiles () {
-        guard let urlTeam = URL(string: jsonTeams) else { return }
-        URLSession.shared.dataTask(with: urlTeam) { (data,response, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            }
-            
-            if let data = data {
-                do {
-                    let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(jsonParse)
-                    
-                    guard let jsonTeams = jsonParse as? [[String: Any]] else {
-                        return
-                    }
-                    
-                    var teams: [TeamModel] = []
-                    
-                    for jt in jsonTeams {
-                        let team: TeamModel = TeamModel(jt)
-                        teams.append(team)
-                    }
-                    
-                    if orderByName {
-                        teamsSortedByName = teams.sorted(by: { $0.name < $1.name })
-                    } else {
-                        
-                    }
-                    
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-                } catch {
-                    print(error)
-                }
-            }            
-        }.resume()
-    }
+        teamsSortedByName = teams
+    }        
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if orderByName {
