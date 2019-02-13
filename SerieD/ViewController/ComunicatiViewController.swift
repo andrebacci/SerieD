@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ComunicatViewController {
+class ComunicatViewController: UIViewController {
     
     let urlComunicati = ""
 }
