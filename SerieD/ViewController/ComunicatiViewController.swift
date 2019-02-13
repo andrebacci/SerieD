@@ -8,8 +8,18 @@
 
 import Foundation
 import UIKit
+import WebKit
 
-class ComunicatViewController: UIViewController {
+class ComunicatiViewController: UIViewController {
     
-    let urlComunicati = ""
+    @IBOutlet weak var webView: WKWebView!
+    
+    let urlSerieD = "https://seried.lnd.it/it/serie-d-comunicati/comunicati-ufficiali/stagione-sportiva-2018-19/serie-d-stagione-sportiva-2018-2019"
+    let urlCoppaItalia = "https://seried.lnd.it/it/serie-d-comunicati/comunicati-ufficiali/stagione-sportiva-2018-19/coppa-italia-stagione-sportiva-2018-2020"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        webView.loadHTMLString(urlSerieD, baseURL: nil)
+    }
 }

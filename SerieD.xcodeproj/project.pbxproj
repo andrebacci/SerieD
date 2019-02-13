@@ -19,6 +19,7 @@
 		1563C0DD21FA309A00008E00 /* SerieDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1563C0DC21FA309A00008E00 /* SerieDTests.swift */; };
 		1563C0E821FA309A00008E00 /* SerieDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1563C0E721FA309A00008E00 /* SerieDUITests.swift */; };
 		15A4805021FBD27E00BD7BE4 /* LeagueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A4804F21FBD27E00BD7BE4 /* LeagueDetailViewController.swift */; };
+		15C8C52E2214AC1800C6C9A3 /* CupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8C52D2214AC1700C6C9A3 /* CupViewController.swift */; };
 		15CEDB522204D55600DECA98 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEDB512204D55600DECA98 /* TeamsViewController.swift */; };
 		15CEDB552204D5C600DECA98 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEDB542204D5C600DECA98 /* TeamModel.swift */; };
 		15D26BD5220D5B0A00E4BA05 /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D26BD4220D5B0A00E4BA05 /* ConfigModel.swift */; };
@@ -63,6 +64,7 @@
 		1563C0E721FA309A00008E00 /* SerieDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDUITests.swift; sourceTree = "<group>"; };
 		1563C0E921FA309A00008E00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A4804F21FBD27E00BD7BE4 /* LeagueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailViewController.swift; sourceTree = "<group>"; };
+		15C8C52D2214AC1700C6C9A3 /* CupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupViewController.swift; sourceTree = "<group>"; };
 		15CEDB512204D55600DECA98 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		15CEDB542204D5C600DECA98 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 		15D26BD4220D5B0A00E4BA05 /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
@@ -161,14 +163,15 @@
 		15A4805121FBD2A000BD7BE4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				15E3802222134276005D9ADD /* AboutUsViewController.swift */,
 				15F0EBD222122700003ACC0E /* ComunicatiViewController.swift */,
+				15C8C52D2214AC1700C6C9A3 /* CupViewController.swift */,
 				1563C0C721FA306700008E00 /* HomeViewController.swift */,
 				15A4804F21FBD27E00BD7BE4 /* LeagueDetailViewController.swift */,
 				1563C0C921FA306700008E00 /* LeaguesViewController.swift */,
 				15CEDB512204D55600DECA98 /* TeamsViewController.swift */,
 				15F839542208EE3D00E325ED /* TeamDetailViewController.swift */,
 				15305168220E33C3004154DD /* WebSiteViewController.swift */,
-				15E3802222134276005D9ADD /* AboutUsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				15F839552208EE3D00E325ED /* TeamDetailViewController.swift in Sources */,
 				15CEDB522204D55600DECA98 /* TeamsViewController.swift in Sources */,
 				1563C0C821FA306700008E00 /* HomeViewController.swift in Sources */,
+				15C8C52E2214AC1800C6C9A3 /* CupViewController.swift in Sources */,
 				15E3802322134276005D9ADD /* AboutUsViewController.swift in Sources */,
 				15305169220E33C3004154DD /* WebSiteViewController.swift in Sources */,
 			);

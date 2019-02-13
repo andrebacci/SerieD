@@ -369,16 +369,16 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Cup View Controller-->
         <scene sceneID="kwD-49-HOG">
             <objects>
-                <viewController id="2m9-y0-Rwd" sceneMemberID="viewController">
+                <viewController id="2m9-y0-Rwd" customClass="CupViewController" customModule="SerieD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tPf-IH-d31">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TgP-P1-4Rt">
-                                <rect key="frame" x="0.0" y="249" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -390,21 +390,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mW4-C2-Fkd"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="TgP-P1-4Rt" id="gTn-mS-Hb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VR-TF-DtU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="-1737"/>
+            <point key="canvasLocation" x="757.60000000000002" y="-1737.481259370315"/>
         </scene>
-        <!--Comunicat View Controller-->
+        <!--Comunicati View Controller-->
         <scene sceneID="1x1-aq-xL1">
             <objects>
-                <viewController id="MMO-mP-VzW" customClass="ComunicatViewController" customModule="SerieD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MMO-mP-VzW" customClass="ComunicatiViewController" customModule="SerieD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="geg-g3-ofe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n4d-0r-eLu">
-                                <rect key="frame" x="67" y="174" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -416,10 +419,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TQy-Vy-pk3"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="n4d-0r-eLu" id="NFa-Ab-Fii"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LyC-ml-TXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751" y="-1011"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-1011.544227886057"/>
         </scene>
         <!--Home-->
         <scene sceneID="qUs-Wc-sgt">
