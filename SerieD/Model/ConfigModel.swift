@@ -10,6 +10,8 @@ import Foundation
 
 class ConfigModel: Codable {
     var season: String = ""
+    var comunicati: String = ""
+    var comunicatiCoppaItalia: String = ""
     
     var countA: Int = 0
     var countB: Int = 0
@@ -23,6 +25,8 @@ class ConfigModel: Codable {
     
     init?(json: [String: Any]) {
         season = (json["season"] as? String)!
+        comunicati = (json["comunicati"] as? String)!
+        comunicatiCoppaItalia = (json["comunicatiCoppaItalia"] as? String)!
         
         countA = (json["countA"] as? Int)!
         countB = (json["countB"] as? Int)!

@@ -1,12 +1,14 @@
 {
     "season": "2018/2019",
     "countA": 18,
-    "countB": 0,
-    "countC": 0,
-    "countD": 0,
-    "countE": 0,
-    "countF": 0,
-    "countG": 0,
-    "countH": 0,
-    "countI": 0
+    "countB": 18,
+    "countC": 18,
+    "countD": 18,
+    "countE": 18,
+    "countF": 18,
+    "countG": 18,
+    "countH": 18,
+    "countI": 18,
+    "comunicati": "www.lnd.it",
+    "comunicatiCoppaItalia": "www.lnd.it"
 }
