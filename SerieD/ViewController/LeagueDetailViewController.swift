@@ -9,6 +9,8 @@
 import UIKit
 import WebKit
 
+var urlsGironi: [UrlModel] = []
+
 class LeagueDetailViewController: UIViewController {
     
     @IBOutlet weak var titleLeague: UILabel!
@@ -20,14 +22,13 @@ class LeagueDetailViewController: UIViewController {
         
         titleLeague.text = leagues[indexCell]
         
-        // init webView
-        //let url = URL(string: "http://www.google.com")
-        //let request = URLRequest(url: url!)
-        
         var frameScore: String = ""
         var frameLeague: String = ""
         
-        switch (indexCell) {
+        frameScore = urlsGironi[indexCell].risultati
+        frameLeague = urlsGironi[indexCell].classifica
+        
+        /* switch (indexCell) {
         case 0:
             frameScore = "<iframe src='https://www.tuttocampo.it/Widget/Risultati/348a4ae9-f7cb-4e51-91ad-41a488e36bac' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
             frameLeague = "<iframe src='https://www.tuttocampo.it/Widget/Classifica/348a4ae9-f7cb-4e51-91ad-41a488e36bac' width='100%' height='100%' scrolling='no' frameborder=0></iframe>"
@@ -68,7 +69,7 @@ class LeagueDetailViewController: UIViewController {
             frameScore = "<p>ERRORE DURANTE IL CARICAMENTO DEI RISULTATI</p>"
             frameLeague = "<p>ERRORE DURANTE IL CARICAMENTO DELLA CLASSIFICA</p>"
             break;
-        }
+        } */
         
         let urlScore = "<html><body>" + frameScore + "</body><html>"
         let urlLeague = "<html><body>" + frameLeague + "</body></html>"

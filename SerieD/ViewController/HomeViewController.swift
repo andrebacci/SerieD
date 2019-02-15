@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     
     let jsonTeams = "http://www.usdsestrilevante.it/vecchioSito/Andre/teams.json"
     let jsonConfig = "http://www.usdsestrilevante.it/vecchioSito/Andre/config.json"
+    let jsonUrl = "http://www.usdsestrilevante.it/vecchioSito/Andre/url.json"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +31,10 @@ class HomeViewController: UIViewController {
     func loadJson() {
         let urlConfig = URL(string: jsonConfig)
         let urlTeams = URL(string: jsonTeams)
+        let urlUrl = URL(string: jsonUrl)
         
         // Parse Config Json
-        let task = URLSession.shared.dataTask(with: urlConfig!) {(data, response, error) in
+        _ = URLSession.shared.dataTask(with: urlConfig!) {(data, response, error) in
             if let data = data {
                 do {
                     let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
@@ -47,9 +49,9 @@ class HomeViewController: UIViewController {
                     print(error)
                 }
             }
-            
+                
             // Parse Teams Json
-            let task = URLSession.shared.dataTask(with: urlTeams!) {(data, response, error) in
+            _ = URLSession.shared.dataTask(with: urlTeams!) {(data, response, error) in
                 if let data = data {
                     do {
                         let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
@@ -57,7 +59,7 @@ class HomeViewController: UIViewController {
                         
                         guard let jsonTeams = jsonParse as? [[String: Any]] else {
                             return
-                        }                    
+                        }
                         
                         for jt in jsonTeams {
                             let team: TeamModel = TeamModel(jt)
@@ -67,6 +69,27 @@ class HomeViewController: UIViewController {
                         print(error)
                     }
                 }
+                
+                // Parse Teams Json
+                _ = URLSession.shared.dataTask(with: urlUrl!) {(data, response, error) in
+                    if let data = data {
+                        do {
+                            let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
+                            print(jsonParse)
+                            
+                            guard let jsonUrl = jsonParse as? [[String: Any]] else {
+                                return
+                            }
+                            
+                            for item in jsonUrl {
+                                let url: UrlModel = UrlModel(item)
+                                urlsGironi.append(url)
+                            }
+                        } catch {
+                            print(error)
+                        }
+                    }
+                }.resume()
             }.resume()
         }.resume()
     }

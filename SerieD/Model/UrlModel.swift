@@ -18,4 +18,10 @@ class UrlModel: Codable {
         risultati = (json["risultati"] as? String)!
         classifica = (json["classifica"] as? String)!
     }
+    
+    init(_ dictionary: [String: Any]) {
+        name = (dictionary["name"] as? String)!
+        risultati = (dictionary["risultati"] as? String)!
+        classifica = (dictionary["classifica"] as? String)!
+    }
 }
