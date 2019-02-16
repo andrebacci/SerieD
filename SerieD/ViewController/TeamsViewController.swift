@@ -12,13 +12,19 @@ import UIKit
 var teams: [TeamModel] = []
 var teamsSortedByName: [TeamModel] = []
 
-var indexTeam = -1
-
 var orderByName = true
+
+var indexTeam = -1
 
 let teamsInLeague: [Int] = [(config?.countA)!, (config?.countB)!, (config?.countC)!, (config?.countD)!, (config?.countE)!, (config?.countF)!, (config?.countG)!, (config?.countH)!, (config?.countI)!]
 
-class TeamsViewController: UITableViewController {
+class TeamsViewController: UITableViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var searchedTeam = [TeamModel]()
+    
+    var searching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +33,14 @@ class TeamsViewController: UITableViewController {
     }        
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if orderByName {
-            return teamsSortedByName.count
+        if searching {
+            return searchedTeam.count
         } else {
-            return teamsInLeague[section]
+            if orderByName {
+                return teamsSortedByName.count
+            } else {
+                return teamsInLeague[section]
+            }
         }
     }
     
@@ -85,7 +95,11 @@ class TeamsViewController: UITableViewController {
             return cell!
         }
         
-        cell!.textLabel?.text = teamsSortedByName[indexPath.row].name
+        if searching {
+            cell?.textLabel?.text = searchedTeam[indexPath.row].name
+        } else {
+            cell!.textLabel?.text = teamsSortedByName[indexPath.row].name
+        }
         
         return cell!
     }
@@ -94,5 +108,13 @@ class TeamsViewController: UITableViewController {
         indexTeam = indexPath.row
         
         performSegue(withIdentifier: "segueTeam", sender: self)
+    }
+    
+    override func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchedTeam = teamsSortedByName.filter({$0.name.prefix(searchText.count) == searchText})
+        
+        searching = true
+        
+        self.tableView.reloadData()
     }
 }
