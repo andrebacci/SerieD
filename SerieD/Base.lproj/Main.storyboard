@@ -268,6 +268,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ips-wY-AZc"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="I4C-fy-i3c" id="9uE-H8-Rsd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8s-Qj-1vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

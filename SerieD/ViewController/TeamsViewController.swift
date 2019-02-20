@@ -109,12 +109,4 @@ class TeamsViewController: UITableViewController, UISearchBarDelegate {
         
         performSegue(withIdentifier: "segueTeam", sender: self)
     }
-    
-    override func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchedTeam = teamsSortedByName.filter({$0.name.prefix(searchText.count) == searchText})
-        
-        searching = true
-        
-        self.tableView.reloadData()
-    }
 }

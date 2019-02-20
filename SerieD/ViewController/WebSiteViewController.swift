@@ -18,9 +18,10 @@ class WebSiteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let team = teamsSortedByName[indexTeam];    
-        let urlLeague = team.website
+        let team = teamsSortedByName[indexTeam]
+        let urlHttp = "http://" + team.website
+        let url = URL(string: urlHttp)!
         
-        webView.loadHTMLString(urlLeague, baseURL: nil)
+        webView.load(URLRequest(url: url))
     }
 }
