@@ -22,7 +22,7 @@ class TeamsViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var searchedTeam = [TeamModel]()
+    var currentTeams = [TeamModel]()
     
     var searching = false
     
@@ -30,11 +30,18 @@ class TeamsViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         teamsSortedByName = teams
-    }        
+        currentTeams = teamsSortedByName
+        
+        initSearchBar()
+    }
+    
+    private func initSearchBar() {
+        searchBar.delegate = self
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
-            return searchedTeam.count
+            return currentTeams.count
         } else {
             if orderByName {
                 return teamsSortedByName.count
@@ -96,7 +103,7 @@ class TeamsViewController: UITableViewController, UISearchBarDelegate {
         }
         
         if searching {
-            cell?.textLabel?.text = searchedTeam[indexPath.row].name
+            cell?.textLabel?.text = currentTeams[indexPath.row].name
         } else {
             cell!.textLabel?.text = teamsSortedByName[indexPath.row].name
         }
@@ -108,5 +115,21 @@ class TeamsViewController: UITableViewController, UISearchBarDelegate {
         indexTeam = indexPath.row
         
         performSegue(withIdentifier: "segueTeam", sender: self)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            currentTeams = teamsSortedByName
+            
+            tableView.reloadData()
+            return
+        }
+        currentTeams = teamsSortedByName.filter({ team -> Bool in
+            searching = true
+            
+            return team.name.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
     }
 }

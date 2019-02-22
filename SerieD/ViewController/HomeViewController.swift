@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
             if let data = data {
                 do {
                     let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(jsonParse)
+                    //print(jsonParse)
                     
                     guard let jsonConfig = jsonParse as? [String: Any] else {
                         return
@@ -55,7 +55,7 @@ class HomeViewController: UIViewController {
                 if let data = data {
                     do {
                         let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
-                        print(jsonParse)
+                        //print(jsonParse)
                         
                         guard let jsonTeams = jsonParse as? [[String: Any]] else {
                             return
@@ -75,7 +75,7 @@ class HomeViewController: UIViewController {
                     if let data = data {
                         do {
                             let jsonParse = try JSONSerialization.jsonObject(with: data, options: [])
-                            print(jsonParse)
+                            //print(jsonParse)
                             
                             guard let jsonUrl = jsonParse as? [[String: Any]] else {
                                 return
