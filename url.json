@@ -1,0 +1,47 @@
+[
+    {
+        "name": "girone_A",
+        "risultati": "<iframe src='https://www.tuttocampo.it/Widget/Risultati/348a4ae9-f7cb-4e51-91ad-41a488e36bac' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>",
+        "classifica": "<iframe src='https://www.tuttocampo.it/Widget/Classifica/348a4ae9-f7cb-4e51-91ad-41a488e36bac' width='100%' height='100%' scrolling='no' frameborder=0></iframe>"
+    },
+    {
+        "name": "girone_B",
+        "risultati": "<iframe src='https://www.tuttocampo.it/Widget/Risultati/47e84921-2cf6-4738-95fc-989ae78a662a' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>",
+        "classifica": "<iframe src='https://www.tuttocampo.it/Widget/Classifica/47e84921-2cf6-4738-95fc-989ae78a662a' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
+    },
+    {
+        "name": "girone_C",
+        "risultati": "<iframe src='https://www.tuttocampo.it/Widget/Risultati/06be8744-4806-4baf-89d9-cc47a6ea5f30' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>",
+        "classifica": "<iframe src='https://www.tuttocampo.it/Widget/Classifica/06be8744-4806-4baf-89d9-cc47a6ea5f30' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
+    },
+    {
+        "name": "girone_D",
+        "risultati": "<iframe src='https://www.tuttocampo.it/Widget/Risultati/ef7eafae-a9e4-47fa-a3f7-da23e25627e1' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>",
+        "classifica": "<iframe src='https://www.tuttocampo.it/Widget/Classifica/ef7eafae-a9e4-47fa-a3f7-da23e25627e1' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
+    },
+    {
+        "name": "girone_E",
+        "risultati": "<iframe src='https://www.tuttocampo.it/Widget/Risultati/a9c7b6a0-c655-4231-b75e-90dacd12b8ad' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>",
+        "classifica": "<iframe src='https://www.tuttocampo.it/Widget/Classifica/a9c7b6a0-c655-4231-b75e-90dacd12b8ad' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
+    },
+    {
+        "name": "girone_F",
+        "risultati": "<iframe src='https://www.tuttocampo.it/Widget/Risultati/17688def-3887-4ec6-ac84-b243269d4f98' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>",
+        "classifica": "<iframe src='https://www.tuttocampo.it/Widget/Classifica/17688def-3887-4ec6-ac84-b243269d4f98' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
+    },
+    {
+        "name": "girone_G",
+        "risultati": "<iframe src='https://www.tuttocampo.it/Widget/Risultati/ae73913f-9f25-4d55-b1eb-c08f6ad50747' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>",
+        "classifica": "<iframe src='https://www.tuttocampo.it/Widget/Classifica/ae73913f-9f25-4d55-b1eb-c08f6ad50747' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
+    },
+    {
+        "name": "girone_H",
+        "risultati": "<iframe src='https://www.tuttocampo.it/Widget/Risultati/7e80452d-38fb-49e7-aca9-a8cbcb0d8cbf' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>",
+        "classifica": "<iframe src='https://www.tuttocampo.it/Widget/Classifica/7e80452d-38fb-49e7-aca9-a8cbcb0d8cbf' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
+    },
+    {
+        "name": "girone_I",
+        "risultati": "<iframe src='https://www.tuttocampo.it/Widget/Risultati/a7cb4aa7-be01-423f-8be6-0fdc1290a966' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>",
+        "classifica": "<iframe src='https://www.tuttocampo.it/Widget/Classifica/a7cb4aa7-be01-423f-8be6-0fdc1290a966' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>"
+    }
+]
